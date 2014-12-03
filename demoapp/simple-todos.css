@@ -52,13 +52,18 @@ form {
   padding: 10px 0;
   background: transparent;
   border: none;
-  width: 100%;
+  width: 70%;
   padding-right: 80px;
   font-size: 1em;
 }
 
 .new-task input:focus{
   outline: 0;
+}
+
+.new-task #add-button{
+    width: 30px;
+    float: right;
 }
 
 ul {
