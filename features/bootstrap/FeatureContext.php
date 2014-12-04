@@ -63,4 +63,23 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     {
         return $this->getSession()->getPage();
     }
+
+    /**
+     * @When I add a task :text
+     */
+    public function iAddATask($text)
+    {
+        $formInput = $this->getSession()->getPage()->find('css', 'form.new-task input');
+        $formInput->setValue($text);
+        $formInput->keyPress('Enter');
+    }
+
+    /**
+     * @Then I should see task added :arg1 to the list
+     */
+    public function iSeeTaskAddedToTheList($arg1)
+    {
+        $this->assertPageContainsText($arg1);
+
+    }
 }
