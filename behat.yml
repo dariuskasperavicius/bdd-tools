@@ -1,0 +1,15 @@
+default:
+  extensions:
+    Behat\MinkExtension:
+      base_url: http://localhost:3000/
+      selenium2:
+        wd_host: 'http://192.168.128.1:4444/wd/hub'
+    SensioLabs\Behat\PageObjectExtension: ~
+
+  suites:
+    core_features:
+      paths:    [ %paths.base%/features ]
+      contexts:
+        - FeatureContext:
+          parameters:
+            base_url: aaa

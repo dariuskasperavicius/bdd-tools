@@ -1,0 +1,21 @@
+{
+    "name": "dardarlt/bdd-tools",
+    "description": "App demonstrating BDD tools",
+    "autoload": {
+        "psr-0": {"": "/src"}
+    },
+    "require": {
+        "symfony/symfony": "2.5.*"
+    },
+    "require-dev": {
+        "behat/behat": "3.*@stable",
+        "behat/mink-extension": "*",
+        "behat/mink-goutte-driver": "1.0.*@dev",
+        "behat/mink": "1.5@stable",
+        "behat/mink-selenium2-driver": "*",
+        "behat/common-contexts": "*@dev",
+        "phpunit/phpunit": "4.*@stable",
+        "sensiolabs/behat-page-object-extension": "dev-master",
+        "ocramius/proxy-manager": "~0.5"
+    }
+}
