@@ -82,4 +82,16 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         $this->assertPageContainsText($arg1);
 
     }
+
+    /**
+     * @Given I empty all current tasks
+     */
+    public function iEmptyAllCurrentTasks()
+    {
+
+        $deleteElements = $this->getSession()->getPage()->findAll('css', 'li button.delete');
+        foreach ($deleteElements as $element) {
+            $element->click();
+        }
+    }
 }

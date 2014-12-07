@@ -3,7 +3,9 @@ Feature: Display todo list
   As a user
   I want to add tasks and see the list of my tasks
 
-  Background: I empty all current tasks
+  Background:
+    Given I visit task list
+    And I empty all current tasks
 
   Scenario: View a task list
     Given I visit task list
