@@ -1,6 +1,6 @@
 casper.test.begin("Display todo list", function (test) {
     casper.start("http://localhost:3000", function () {
-        if (this.exists("li button.delete")) {
+        while (this.exists("li button.delete")) {
             this.click("li button.delete");
         }
     });
