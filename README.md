@@ -1,4 +1,4 @@
-bdd-tools
+Diving into BDD: how we do it
 =========
 
 BDD tools compared: Behat, Casperjs, Nightwatch
@@ -20,5 +20,5 @@ Run Selenium
 
 Run Behat
 ----------
-```vendor/bin/behat```
+vendor/bin/behat
 
