@@ -1,14 +1,10 @@
-bdd-tools
+Diving into BDD: how we do it
 =========
 
 BDD tools compared: Behat, Casperjs, Nightwatch
 
 
-Demo app
-=========
-We have several ways with our demo app
-
-Scenario A: Meteor
+Meteor
 ---------
 
 * Install Meteor
@@ -16,7 +12,13 @@ Scenario A: Meteor
 * cd demoapp
 * meteor
 
+Run Selenium
+----------
+* Download a Selenium Server: http://www.seleniumhq.org/download/
+* Run it:
+```java -jar selenium-server-standalone-2.44.0.jar```
 
-Scenario B: Build our own
----------
-* Build it!
+Run Behat
+----------
+vendor/bin/behat
+

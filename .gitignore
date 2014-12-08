@@ -7,6 +7,7 @@
 # Cache and logs (Symfony3)
 /var/cache/*
 /var/logs/*
+/reports
 !var/cache/.gitkeep
 !var/logs/.gitkeep
 
@@ -33,3 +34,10 @@
 # Composer PHAR
 /composer.phar
 .vagrant
+
+# node
+/node_modules
+npm-debug.log
+
+# IDE
+/.idea

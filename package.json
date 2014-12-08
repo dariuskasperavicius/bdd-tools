@@ -1,0 +1,13 @@
+{
+  "name": "bdd-tools",
+  "version": "1.0.0",
+  "devDependencies": {
+    "nightwatch": "^0.5.35",
+    "grunt": "^0.4.5",
+    "grunt-nightwatch": "^0.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dardarlt/bdd-tools.git"
+  }
+}
