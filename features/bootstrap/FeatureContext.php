@@ -73,8 +73,14 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     public function iAddATask($text)
     {
         $formInput = $this->getSession()->getPage()->find('css', 'form.new-task input');
+
+        //added add as examples
+        echo "For more clear example, we add 3 little pauses";
+        $this->getSession()->wait(500);
         $formInput->setValue($text);
+        $this->getSession()->wait(500);
         $formInput->keyPress('Enter');
+        $this->getSession()->wait(500);
     }
 
     /**
@@ -83,7 +89,6 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
     public function iSeeTaskAddedToTheList($arg1)
     {
         $this->assertPageContainsText($arg1);
-
     }
 
     /**
