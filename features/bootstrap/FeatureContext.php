@@ -7,6 +7,7 @@ use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\MinkExtension\Context\MinkContext;
+use SensioLabs\Behat\PageObjectExtension\PageObject\Page;
 
 /**
  * Defines application features from the specific context.
@@ -22,10 +23,11 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
      * Every scenario gets its own context instance.
      * You can also pass arbitrary arguments to the
      * context constructor through behat.yml.
+     * @param TodoFormPageObject $form
      */
-    public function __construct()
+    public function __construct(TodoFormPageObject $form)
     {
-
+        $this->form = $form;
     }
 
     /**
@@ -66,6 +68,7 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
 
     /**
      * @When I add a task :text
+     * @param $text
      */
     public function iAddATask($text)
     {
@@ -93,5 +96,13 @@ class FeatureContext extends MinkContext implements Context, SnippetAcceptingCon
         foreach ($deleteElements as $element) {
             $element->click();
         }
+    }
+
+    /**
+     * @Then I should see Add button
+     */
+    public function iShouldSeeAddButton()
+    {
+        \PHPUnit_Framework_Assert::assertTrue($this->form->hasAddNewTaskButton());
     }
 }
