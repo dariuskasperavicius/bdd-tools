@@ -12,4 +12,4 @@ default:
       contexts:
         - FeatureContext:
           parameters:
-            base_url: aaa
+            base_url: http://localhost:3000/
